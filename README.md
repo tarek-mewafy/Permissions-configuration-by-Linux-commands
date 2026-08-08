@@ -71,7 +71,7 @@ Now, to outline the changed we made, we use `ls -l` -we can use `ls -la` as well
   ls -l
   ```
 
-  ![Step 3](images/step3.jpg)
+  ![Step 3](images/step3.png)
 
   ### Explanation
   - `chmod` is used to modify permissions and it requires to arguments.
