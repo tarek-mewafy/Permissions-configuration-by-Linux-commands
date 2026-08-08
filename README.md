@@ -1,4 +1,4 @@
-# Permissions-configuration-by-Linux-commands
+# Linux File Permission Configuration
 
 These are simple instructions about how to use Linux commands to alter files permissions.
 
@@ -19,11 +19,11 @@ First, we want to know in which directory we are right now. Then, we will move t
   ![Step 1](images/step1.png)
     
   ### Explanation
-  - `pwd` is used to outline the current location.
+  - `pwd` is used to display the current working directory.
   - `cd` -which stands for "change directory"- is used to change the current directory.
-  - `./Labs` the directory we want to move to.
+  - `./Labs` specifies the `Labs` directory which is located in the current directory.
 
-  > **Note:** A period `.` is put before the sub-directory to indicate that it is located in the current directory.
+  > **Note:** `./` refers to the current directory.
 
 
 ## Step 2: Check files or directories details
@@ -45,14 +45,16 @@ After moving to the required directory, we will use some commands to define the 
   ![Step 2](images/step2.png)
 
   ### Explanation
-  -`ls` is used to outline contents of the current directory.
-  -`ls -l` is used to outline the permissions of files and directories.
-  -`ls -la` is used to outline the permissions of files and directories including hidden ones.
+  - `ls` is used to list the contents of the current directory.
+  - `ls -l` is used to display the permissions of files and directories.
+  - `ls -la` is used to display the permissions of files and directories including hidden ones.
   - The permissions string consists of a 10-character string.
-  - The first character demonstrates whether this is a file or directory.
-  - The second, third and fourth characters indicates the user permissions of read `r`, write `w` and execute `x`.
-  - The fifth, sixth and seventh characters indicates the group permissions of read `r`, write `w` and execute `x`.
-  - The eighth, ninth and tenth characters indicates the other permissions of read `r`, write `w` and execute `x`.
+  - The first character demonstrates the file type, such as a regular file `-` or a directory `d`.
+  - The next nine characters represent the permissions for the user, group, and others.
+  - The first three characters represent the user's permissions.
+  - The next three characters represent the group's permissions.
+  - The last three characters represent the permissions for other.
+  - `r` `w` and `x` represent "read", "write" and "execute".
 
   > **Note:** If one permission is revoked, it will be assigned as a hyphen `-`.
 
@@ -74,9 +76,9 @@ Now, to outline the changed we made, we use `ls -l` -we can use `ls -la` as well
   ![Step 3](images/step3.png)
 
   ### Explanation
-  - `chmod` is used to modify permissions and it requires to arguments.
-  - `g-w` indicates revoking group's write permissions.
-  - `photo.jpg` the file we are modifying.
+  - `chmod` is used to modify file permissions and it requires a mode and one or more files.
+  - `g-w` removes group's write permissions.
+  - `photo.jpg` is the file whose permissions we are modifying.
 
   > **Note:** `chmod` can contain letters and operators such as `+`, `-` or `=`. It can contain digits indicating permission values as well.
   > **Note:** We can modify more than one permission by separating them with comma `,`.
@@ -87,20 +89,22 @@ Now, to outline the changed we made, we use `ls -l` -we can use `ls -la` as well
 
   ```bash
   pwd
-  cd ./relevant path
+  cd ./relevant_path
   ls
   ls -l
   ls -la
-  chmod `user``operator``permission` file.txt
+  chmod [who][operator][permission] file.txt
   ```
 
 
 
+```markdown
 ## What I Learned
 
-  - How to communicate with the command-line.
-  - File permissions in Linux and how to modify them.
-  - How to define files details.
+- How to interact with the Linux command line.
+- How Linux file permissions work and how to modify them.
+- How to inspect file and directory details using Linux commands.
+```
 
 
 
