@@ -8,20 +8,20 @@ These are simple instructions about how to use Linux commands to alter files per
 
 First, we want to know in which directory we are right now. Then, we will move to another sub-directory we want to modify its permissions.
 
-    ```bash
-    pwd
-    ```
-    
-    ```bash
-    cd ./Labs
-    ```
+  ```bash
+  pwd
+  ```
+
+  ```bash
+  cd ./Labs
+  ```
 
   ![Step 1](images/step1.png)
     
   ### Explanation
-    - `pwd` is used to outline the current location.
-    - `cd` -which stands for "change directory"- is used to change the current directory.
-    - `./Labs` the directory we want to move to.
+  - `pwd` is used to outline the current location.
+  - `cd` -which stands for "change directory"- is used to change the current directory.
+  - `./Labs` the directory we want to move to.
 
   > **Note:** A period `.` is put before the sub-directory to indicate that it is located in the current directory.
 
@@ -30,29 +30,29 @@ First, we want to know in which directory we are right now. Then, we will move t
 
 After moving to the required directory, we will use some commands to define the details about files and directories.
 
-    ```bash
-    ls
-    ```
+  ```bash
+  ls
+  ```
 
-    ```bash
-    ls -l
-    ```
+  ```bash
+  ls -l
+  ```
 
-    ```bash
-    ls -la
-    ```
+  ```bash
+  ls -la
+  ```
 
   ![Step 2](images/step2.png)
 
   ### Explanation
-    -`ls` is used to outline contents of the current directory.
-    -`ls -l` is used to outline the permissions of files and directories.
-    -`ls -la` is used to outline the permissions of files and directories including hidden ones.
-    - The permissions string consists of a 10-character string.
-    - The first character demonstrates whether this is a file or directory.
-    - The second, third and fourth characters indicates the user permissions of read `r`, write `w` and execute `x`.
-    - The fifth, sixth and seventh characters indicates the group permissions of read `r`, write `w` and execute `x`.
-    - The eighth, ninth and tenth characters indicates the other permissions of read `r`, write `w` and execute `x`.
+  -`ls` is used to outline contents of the current directory.
+  -`ls -l` is used to outline the permissions of files and directories.
+  -`ls -la` is used to outline the permissions of files and directories including hidden ones.
+  - The permissions string consists of a 10-character string.
+  - The first character demonstrates whether this is a file or directory.
+  - The second, third and fourth characters indicates the user permissions of read `r`, write `w` and execute `x`.
+  - The fifth, sixth and seventh characters indicates the group permissions of read `r`, write `w` and execute `x`.
+  - The eighth, ninth and tenth characters indicates the other permissions of read `r`, write `w` and execute `x`.
 
   > **Note:** If one permission is revoked, it will be assigned as a hyphen `-`.
 
@@ -61,22 +61,22 @@ After moving to the required directory, we will use some commands to define the 
 
 If we want to change the permissions of any file, such as `photo.jpg`, to revoke write permissions of the group, we will use the `chmod` command -which stands for "change mode"-.
 
-    ```bash
-    chmod g-w photo.jpg
-    ```
+  ```bash
+  chmod g-w photo.jpg
+  ```
 
 Now, to outline the changed we made, we use `ls -l` -we can use `ls -la` as well-.
 
-    ```bash
-    ls -l
-    ```
+  ```bash
+  ls -l
+  ```
 
   ![Step 3](images/step3.jpg)
 
   ### Explanation
-    - `chmod` is used to modify permissions and it requires to arguments.
-    - `g-w` indicates revoking group's write permissions.
-    - `photo.jpg` the file we are modifying.
+  - `chmod` is used to modify permissions and it requires to arguments.
+  - `g-w` indicates revoking group's write permissions.
+  - `photo.jpg` the file we are modifying.
 
   > **Note:** `chmod` can contain letters and operators such as `+`, `-` or `=`. It can contain digits indicating permission values as well.
   > **Note:** We can modify more than one permission by separating them with comma `,`.
@@ -85,14 +85,14 @@ Now, to outline the changed we made, we use `ls -l` -we can use `ls -la` as well
 
 ## Commands Used
 
-    ```bash
-    pwd
-    cd ./relevant path
-    ls
-    ls -l
-    ls -la
-    chmod `user``operator``permission` file.txt
-    ```
+  ```bash
+  pwd
+  cd ./relevant path
+  ls
+  ls -l
+  ls -la
+  chmod `user``operator``permission` file.txt
+  ```
 
 
 
